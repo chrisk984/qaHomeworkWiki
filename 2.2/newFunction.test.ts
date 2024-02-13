@@ -9,10 +9,10 @@ describe("myFunction", () => {
     expect(myFunction(1)).toBe("false");
   });
   it("returns the word 'big' if I pass in a numbewr greater than 5", () => {
-    expect(myFunction(100)).toBe("big");
+    expect(myFunction(100)).toBe("true");
   });
   it("returns the word 'negative' if a negative number is passed in", () => {
-    expect(myFunction(-1)).toBe("negative");
+    expect(myFunction(-1)).toBe("false");
   });
 });
 
@@ -21,21 +21,21 @@ import { blockBuster } from "./newFunction";
 
 describe('Testing Block Buster', () => {
   it('should return the movie set for MovieOne', () => {
-    expect(blockBuster("Movie One")).toBe("Free Guy"); 
+    expect(blockBuster("Movie One")).toBe("Poor Things"); 
   }); 
   it("should return the movie set for movie two", () => {
-    expect(blockBuster('Movie Two')).toBe("Everything, Everywhere, All at Once"); 
+    expect(blockBuster('Movie Two')).toBe("SaltBurn"); 
   }); 
   it("should return the movie set for movie three", () => {
-    expect(blockBuster('Movie Three')).toBe("Surf's Up"); 
+    expect(blockBuster('Movie Three')).toBe("The Holdovers"); 
   }); 
   it("should return the movie set for movie four", () => {
-    expect(blockBuster("Movie Four")).toBe("Lilo and Stitch"); 
+    expect(blockBuster("Movie Four")).toBe("Killers Of The Flower Moon"); 
   });
   it("should return the movie set for movie five", () => {
-    expect(blockBuster("Movie Five")).toBe("Ex Machina"); 
+    expect(blockBuster("Movie Five")).toBe("Oppenheimer"); 
   }); 
   it("should return the default", () => {
-    expect(blockBuster("Fast X")).toBe("I'm sorry we do not carry Fast X"); 
+    expect(blockBuster("Oppenheimer")).toBe("I'm sorry we do not carry Oppenheirmer"); 
   });
 }); 
