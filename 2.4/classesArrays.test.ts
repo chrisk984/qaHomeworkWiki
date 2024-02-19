@@ -27,12 +27,12 @@ let employee: Array<Employee> = [
     new Employee("Thierry Mwamba", 9875462345, "Senior Engineer") 
 ]
 
-const addEmployee: By = By.name("addEmployee");
+const addEmployee: By = By.name('addEmployee');
 const newEmployee: By = By.xpath('//li[text() = "New Employee"]');
-const nameInput: By = By.name("nameInput");
-const phoneInput: By = By.name("phoneInput");
-const titleInput: By = By.name("titleInput");
-const saveBtn: By = By.id("saveBtn");
+const nameInput: By = By.name('nameEntry');
+const phoneInput: By = By.xpath('(//input[@class="materialInput"])[2]');
+const titleInput: By = By.name('titleEntry');
+const saveBtn: By = By.id('saveBtn');
 let myFunc = async (employees) => {
    //Create a function to add an employee.
    await driver.findElement(addEmployee).click();
