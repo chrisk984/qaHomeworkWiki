@@ -26,21 +26,21 @@ let newInterns: Array<Intern> = [
 
 let addInterns = async (newInterns) => {
    //create a function to add the interns from your array
-   await pages.click(pages.addEmployee);
-   await pages.click(pages.newEmployee);
-   await pages.setInput(pages.namInp, newInterns.name); 
-   await pages.setInput(pages.phoInp, newInterns.phone); 
-   await pages.setInput(pages.titleInp, newInterns.title); 
-   await pages.click(pages.saveBtn); 
-   await pages.driver.sleep(3000); 
+   await page.click(page.addEm);
+   await page.click(page.newEm);
+   await page.setInput(page.namInp, newInterns.name); 
+   await page.setInput(page.phoInp, newInterns.phone); 
+   await page.setInput(page.titleInp, newInterns.title); 
+   await page.click(page.saveBtn); 
+   await page.driver.sleep(3000); 
 
 };
 
 test('can add the bake off crew',async () => {
-    await two.navigate(); 
-    await two.getElement(two.addEm); 
+    await page.navigate(); 
+    await page.getElement(page.addEm); 
     for(let i= 0; i < newInterns.length; i ++){
         await addInterns(newInterns[i]); 
     }; 
-    await two.driver.quit(); 
+    await page.driver.quit(); 
 })
